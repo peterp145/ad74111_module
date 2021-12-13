@@ -1,0 +1,299 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "AD74111 PMOD Module for Guitar"
+Date ""
+Rev "0"
+Comp "Peter P"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L my_ics:AD74111 U?
+U 1 1 61B4D4E1
+P 5400 3650
+F 0 "U?" H 4900 2950 50  0000 L CNN
+F 1 "AD74111" H 5600 2950 50  0000 L CNN
+F 2 "" H 5400 2850 50  0001 C CNN
+F 3 "" H 5400 2850 50  0001 C CNN
+	1    5400 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDA #PWR?
+U 1 1 61B4EA05
+P 5300 4500
+F 0 "#PWR?" H 5300 4250 50  0001 C CNN
+F 1 "GNDA" H 5305 4327 50  0000 C CNN
+F 2 "" H 5300 4500 50  0001 C CNN
+F 3 "" H 5300 4500 50  0001 C CNN
+	1    5300 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDD #PWR?
+U 1 1 61B4FAB8
+P 5500 4500
+F 0 "#PWR?" H 5500 4250 50  0001 C CNN
+F 1 "GNDD" H 5504 4345 50  0000 C CNN
+F 2 "" H 5500 4500 50  0001 C CNN
+F 3 "" H 5500 4500 50  0001 C CNN
+	1    5500 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 4500 5500 4400
+Wire Wire Line
+	5300 4500 5300 4400
+$Comp
+L my_conns:Conn_02x06_100mil_right_angle J?
+U 1 1 61B5B751
+P 1300 1100
+F 0 "J?" H 1350 1517 50  0000 C CNN
+F 1 "Conn_02x06_100mil_right_angle" H 1350 1426 50  0000 C CNN
+F 2 "" H 1300 1100 50  0001 C CNN
+F 3 "~" H 1300 1100 50  0001 C CNN
+	1    1300 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 61B5EAD3
+P 3000 1000
+F 0 "#PWR?" H 3000 850 50  0001 C CNN
+F 1 "+3.3V" H 3015 1173 50  0000 C CNN
+F 2 "" H 3000 1000 50  0001 C CNN
+F 3 "" H 3000 1000 50  0001 C CNN
+	1    3000 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDD #PWR?
+U 1 1 61B60C25
+P 1000 1500
+F 0 "#PWR?" H 1000 1250 50  0001 C CNN
+F 1 "GNDD" H 1004 1345 50  0000 C CNN
+F 2 "" H 1000 1500 50  0001 C CNN
+F 3 "" H 1000 1500 50  0001 C CNN
+	1    1000 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDD #PWR?
+U 1 1 61B61FAC
+P 1700 1500
+F 0 "#PWR?" H 1700 1250 50  0001 C CNN
+F 1 "GNDD" H 1704 1345 50  0000 C CNN
+F 2 "" H 1700 1500 50  0001 C CNN
+F 3 "" H 1700 1500 50  0001 C CNN
+	1    1700 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1100 1300 1000 1300
+Wire Wire Line
+	1000 1300 1000 1500
+Wire Wire Line
+	1600 1300 1700 1300
+Wire Wire Line
+	1700 1300 1700 1500
+Wire Wire Line
+	1100 1400 900  1400
+Text Label 4700 3150 2    50   ~ 0
+mclk
+Text Label 4700 3250 2    50   ~ 0
+dclk
+Text Label 4700 3350 2    50   ~ 0
+din
+Text Label 4700 3450 2    50   ~ 0
+dfs
+Text Label 4700 3550 2    50   ~ 0
+dout
+Text Label 4700 3650 2    50   ~ 0
+~reset
+Wire Wire Line
+	4700 3150 4800 3150
+Wire Wire Line
+	4700 3250 4800 3250
+Wire Wire Line
+	4700 3350 4800 3350
+Wire Wire Line
+	4700 3450 4800 3450
+Wire Wire Line
+	4700 3550 4800 3550
+Wire Wire Line
+	4700 3650 4800 3650
+Text Label 1000 900  2    50   ~ 0
+mclk
+Text Label 1700 900  0    50   ~ 0
+dclk
+Text Label 1000 1000 2    50   ~ 0
+din
+Text Label 1700 1000 0    50   ~ 0
+dout
+Text Label 1000 1100 2    50   ~ 0
+dfs
+Text Label 1700 1200 0    50   ~ 0
+~reset
+Wire Wire Line
+	1000 900  1100 900 
+Wire Wire Line
+	1000 1000 1100 1000
+Wire Wire Line
+	1000 1100 1100 1100
+Wire Wire Line
+	1600 900  1700 900 
+Wire Wire Line
+	1600 1000 1700 1000
+Wire Wire Line
+	1600 1200 1700 1200
+NoConn ~ 1600 1100
+NoConn ~ 1100 1200
+$Comp
+L my_caps:cap_10000PF_50V_0603_C0G-NP0 C?
+U 1 1 61B7BEC6
+P 2500 2650
+F 0 "C?" H 2550 2550 50  0000 L CNN
+F 1 "cap_10000PF_50V_0603_C0G-NP0" H 2650 2300 50  0001 L CNN
+F 2 "my_caps:C_0603_1608Metric" H 2650 2400 50  0001 L CNN
+F 3 "~" H 2500 2650 50  0001 C CNN
+F 4 "C1608C0G1H103J080AA" H 2650 2200 50  0001 L CNN "mpns"
+F 5 "10000PF 50V C0G" H 2550 2450 50  0000 L CNN "schem_val"
+	1    2500 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 4050 3550 4050
+Wire Wire Line
+	3550 4050 3550 4400
+Wire Wire Line
+	3550 4700 3550 4750
+$Comp
+L power:GNDA #PWR?
+U 1 1 61B756B1
+P 3550 4750
+F 0 "#PWR?" H 3550 4500 50  0001 C CNN
+F 1 "GNDA" H 3555 4577 50  0000 C CNN
+F 2 "" H 3550 4750 50  0001 C CNN
+F 3 "" H 3550 4750 50  0001 C CNN
+	1    3550 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L my_caps:cap_1000PF_50V_0603_C0G-NP0 C?
+U 1 1 61B7315A
+P 3550 4550
+F 0 "C?" H 3550 4650 50  0000 L CNN
+F 1 "cap_1000PF_50V_0603_C0G-NP0" H 3700 4200 50  0001 L CNN
+F 2 "my_caps:C_0603_1608Metric" H 3700 4300 50  0001 L CNN
+F 3 "~" H 3550 4550 50  0001 C CNN
+F 4 "GRM1885C1H102JA01D" H 3700 4100 50  0001 L CNN "mpns"
+F 5 "1000PF 50V C0G" H 3600 4450 50  0000 L CNN "schem_val"
+	1    3550 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 4150 4800 4150
+Wire Wire Line
+	4400 4400 4400 4150
+Wire Wire Line
+	4400 4700 4400 4750
+$Comp
+L power:GNDA #PWR?
+U 1 1 61B74DE5
+P 4400 4750
+F 0 "#PWR?" H 4400 4500 50  0001 C CNN
+F 1 "GNDA" H 4405 4577 50  0000 C CNN
+F 2 "" H 4400 4750 50  0001 C CNN
+F 3 "" H 4400 4750 50  0001 C CNN
+	1    4400 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L my_caps:cap_1000PF_50V_0603_C0G-NP0 C?
+U 1 1 61B6B74E
+P 4400 4550
+F 0 "C?" H 4425 4650 50  0000 L CNN
+F 1 "cap_1000PF_50V_0603_C0G-NP0" H 4550 4200 50  0001 L CNN
+F 2 "my_caps:C_0603_1608Metric" H 4550 4300 50  0001 L CNN
+F 3 "~" H 4400 4550 50  0001 C CNN
+F 4 "GRM1885C1H102JA01D" H 4550 4100 50  0001 L CNN "mpns"
+F 5 "1000PF 50V C0G" H 4450 4450 50  0000 L CNN "schem_val"
+	1    4400 4550
+	1    0    0    -1  
+$EndComp
+Text Label 4700 3850 2    50   ~ 0
+vin
+Wire Wire Line
+	4700 3850 4800 3850
+$Comp
+L power:GNDA #PWR?
+U 1 1 61B96AAD
+P 2500 2900
+F 0 "#PWR?" H 2500 2650 50  0001 C CNN
+F 1 "GNDA" H 2505 2727 50  0000 C CNN
+F 2 "" H 2500 2900 50  0001 C CNN
+F 3 "" H 2500 2900 50  0001 C CNN
+	1    2500 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 2800 2500 2900
+Text Label 2600 2500 0    50   ~ 0
+vin
+Wire Wire Line
+	2600 2500 2500 2500
+$Comp
+L my_resistors:res_51R_1%_0.1W_0603 R?
+U 1 1 61B99EDC
+P 2250 2500
+F 0 "R?" V 2450 2500 50  0000 C CNN
+F 1 "res_51R_1%_0.1W_0603" H 2350 2300 50  0001 L CNN
+F 2 "my_resistors:R_0603_1608Metric" H 2350 2200 50  0001 L CNN
+F 3 "~" H 2250 2500 50  0001 L CNN
+F 4 "51R 1% 0.1W" V 2350 2500 50  0000 C CNN "schem_val"
+F 5 "CR0603-FX-51R0ELF" H 2350 2100 50  0001 L CNN "mpns"
+	1    2250 2500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2400 2500 2500 2500
+Connection ~ 2500 2500
+$Comp
+L my_caps:cap_47UF_10%_16V_1210_X6S C?
+U 1 1 61B9C7B3
+P 1700 2500
+F 0 "C?" V 1448 2500 50  0000 C CNN
+F 1 "cap_47UF_10%_16V_1210_X6S" H 1850 2150 50  0001 L CNN
+F 2 "my_caps:C_1210_3225Metric" H 1850 2250 50  0001 L CNN
+F 3 "~" H 1700 2500 50  0001 C CNN
+F 4 "" H 1850 2050 50  0001 L CNN "mpns"
+F 5 "47UF 16V 10%" V 1539 2500 50  0000 C CNN "schem_val"
+	1    1700 2500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1850 2500 2100 2500
+$Comp
+L power:+3.3V #PWR?
+U 1 1 61B9E9B2
+P 5650 2100
+F 0 "#PWR?" H 5650 1950 50  0001 C CNN
+F 1 "+3.3V" H 5665 2273 50  0000 C CNN
+F 2 "" H 5650 2100 50  0001 C CNN
+F 3 "" H 5650 2100 50  0001 C CNN
+	1    5650 2100
+	1    0    0    -1  
+$EndComp
+Text Label 900  1400 2    50   ~ 0
+3v3_in
+Wire Wire Line
+	1600 1400 1800 1400
+Text Label 1800 1400 0    50   ~ 0
+3v3_in
+$EndSCHEMATC
